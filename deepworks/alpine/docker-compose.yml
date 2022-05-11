@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  alpine312:
+    image: deepworks/alpine:312-1.1.0
+    build:
+      context: .
+      dockerfile: ./alpine312.Dockerfile
+  alpine313:
+    image: deepworks/alpine:313-1.0.0
+    build:
+      context: .
+      dockerfile: ./alpine313.Dockerfile
+  alpine314:
+    image: deepworks/alpine:314-1.0.0
+    build:
+      context: .
+      dockerfile: ./alpine314.Dockerfile
+  alpine315:
+    image: deepworks/alpine:315-1.0.0
+    build:
+      context: .
+      dockerfile: ./alpine315.Dockerfile
+  alpineEdge:
+    image: deepworks/alpine:edge-1.0.0
+    build:
+      context: .
+      dockerfile: ./alpineEdge.Dockerfile

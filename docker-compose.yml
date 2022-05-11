@@ -1,0 +1,42 @@
+version: "3.9"
+services:
+  alpine312:
+    extends:
+      file: ./deepworks/alpine/docker-compose.yml
+      service: alpine312
+    build:
+      context: ./deepworks/alpine
+  alpine313:
+    extends:
+      file: ./deepworks/alpine/docker-compose.yml
+      service: alpine313
+    build:
+      context: ./deepworks/alpine
+  alpine314:
+    extends:
+      file: ./deepworks/alpine/docker-compose.yml
+      service: alpine314
+    build:
+      context: ./deepworks/alpine
+  alpine315:
+    extends:
+      file: ./deepworks/alpine/docker-compose.yml
+      service: alpine315
+    build:
+      context: ./deepworks/alpine
+  alpineEdge:
+    extends:
+      file: ./deepworks/alpine/docker-compose.yml
+      service: alpineEdge
+    build:
+      context: ./deepworks/alpine
+  centos7:
+    image: deepworks/centos:7-1.0.0
+    build:
+      context: ./centos
+      dockerfile: ./centos7.Dockerfile
+  centos8:
+    image: deepworks/centos:8-1.0.0
+    build:
+      context: ./centos
+      dockerfile: ./centos8.Dockerfile
