@@ -1,42 +1,37 @@
-version: "3.9"
 services:
-  alpine312:
-    extends:
-      file: ./deepworks/alpine/docker-compose.yml
-      service: alpine312
-    build:
-      context: ./deepworks/alpine
-  alpine313:
-    extends:
-      file: ./deepworks/alpine/docker-compose.yml
-      service: alpine313
-    build:
-      context: ./deepworks/alpine
-  alpine314:
-    extends:
-      file: ./deepworks/alpine/docker-compose.yml
-      service: alpine314
-    build:
-      context: ./deepworks/alpine
-  alpine315:
-    extends:
-      file: ./deepworks/alpine/docker-compose.yml
-      service: alpine315
-    build:
-      context: ./deepworks/alpine
-  alpineEdge:
-    extends:
-      file: ./deepworks/alpine/docker-compose.yml
-      service: alpineEdge
-    build:
-      context: ./deepworks/alpine
+  services:
+    alpine312:
+      image: deepworks/base-images:alpine312-1.0.0
+      build:
+        context: .
+        dockerfile: ./Dockerfile.alpine312
+    alpine313:
+      image: deepworks/base-images:alpine313-1.0.0
+      build:
+        context: .
+        dockerfile: ./Dockerfile.alpine313
+    alpine314:
+      image: deepworks/base-images:alpine314-1.0.0
+      build:
+        context: .
+        dockerfile: ./Dockerfile.alpine314
+    alpine315:
+      image: deepworks/base-images:alpine315-1.0.0
+      build:
+        context: .
+        dockerfile: ./Dockerfile.alpine315
+    alpineEdge:
+      image: deepworks/base-images:alpine-1.0.0
+      build:
+        context: .
+        dockerfile: ./Dockerfile.alpineEdge
   centos7:
-    image: deepworks/centos:7-1.0.0
+    image: deepworks/base-images:centos7-1.0.0
     build:
-      context: ./centos
-      dockerfile: ./centos7.Dockerfile
+      context: .
+      dockerfile: ./Dockerfile.centos7
   centos8:
-    image: deepworks/centos:8-1.0.0
+    image: deepworks/base-images:centos8-1.0.0
     build:
-      context: ./centos
-      dockerfile: ./centos8.Dockerfile
+      context: .
+      dockerfile: ./Dockerfile.centos8
