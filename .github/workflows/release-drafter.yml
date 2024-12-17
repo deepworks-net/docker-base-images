@@ -7,3 +7,5 @@ on:
 jobs:
   update_release_draft:
     uses: deepworks-net/github.actions/.github/workflows/release-drafter.yml@main
+    with:
+      config-path: deepworks-net/github.actions/.github/release-drafter.yml@main
