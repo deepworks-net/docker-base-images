@@ -1,0 +1,9 @@
+name: Draft Github Release
+on:
+  push:
+    # branches to consider in the event; optional, defaults to develop
+    branches:
+      - main
+jobs:
+  update_release_draft:
+    uses: deepworks-net/github.actions/.github/workflows/release-drafter.yml@main
