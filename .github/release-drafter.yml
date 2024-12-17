@@ -1,1 +1,1 @@
-_extends: deepworks-net/github.actions/.github/release-drafter.yml@main
+_extends: deepworks-net/github.actions/.github/release-drafter.yml
